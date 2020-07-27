@@ -5,17 +5,18 @@
  */
 package com.app.practica.facade;
 
-import com.app.practica.model.Persona;
+import com.app.practica.dto.CarroDTO;
+import com.app.practica.model.Carro;
+import java.util.List;
 
 /**
  *
  * @author Simon
  */
-public interface PersonaServiceFacade {
+public interface CarroServiceFacade {
 
-    Persona guardarPersona(Persona persona);
+    Carro guardarCarro(Carro carro);
 
-    Persona findById(Long id);
-
-    Persona findByDocumento(String nombre);
+    List<CarroDTO> findByIdPersona(Long id);
+    
 }

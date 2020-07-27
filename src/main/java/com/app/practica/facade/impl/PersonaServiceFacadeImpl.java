@@ -26,4 +26,14 @@ public class PersonaServiceFacadeImpl implements PersonaServiceFacade {
         return personaService.guardarPersona(persona);
     }
 
+    @Override
+    public Persona findById(Long id) {
+        return personaService.findById(id);
+    }
+
+    @Override
+    public Persona findByDocumento(String nombre) {
+        return personaService.findByDocumento(nombre);
+    }
+
 }

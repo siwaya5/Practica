@@ -3,35 +3,24 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.app.practica.model;
-
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Table;
+package com.app.practica.dto;
 
 /**
  *
  * @author Simon
  */
-@Entity
-@Table(name = "persona")
-public class Persona {
+public class PersonaDTO {
 
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @javax.persistence.Id
-    @Column(columnDefinition = "serial")
     private Long id;
     private String documento;
     private String nombre;
     private String apellido;
     private String ciudad;
 
-    public Persona() {
+    public PersonaDTO() {
     }
 
-    public Persona(Long id, String documento, String nombre, String apellido, String ciudad) {
+    public PersonaDTO(Long id, String documento, String nombre, String apellido, String ciudad) {
         this.id = id;
         this.documento = documento;
         this.nombre = nombre;
@@ -45,6 +34,14 @@ public class Persona {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public String getDocumento() {
+        return documento;
+    }
+
+    public void setDocumento(String documento) {
+        this.documento = documento;
     }
 
     public String getNombre() {
@@ -69,14 +66,6 @@ public class Persona {
 
     public void setCiudad(String ciudad) {
         this.ciudad = ciudad;
-    }
-
-    public String getDocumento() {
-        return documento;
-    }
-
-    public void setDocumento(String documento) {
-        this.documento = documento;
     }
 
 }

@@ -5,16 +5,16 @@
  */
 package com.app.practica.repository;
 
-import com.app.practica.model.Persona;
+import com.app.practica.model.Carro;
+import java.util.List;
 import org.springframework.data.repository.CrudRepository;
-import org.springframework.stereotype.Repository;
 
 /**
  *
  * @author Simon
  */
-public interface PersonaRepository extends CrudRepository<Persona, Long> {
+public interface CarroRepository extends CrudRepository<Carro, Long> {
 
-    public Persona findByDocumento(String documento);
+    List<Carro> findByIdPersona(Long idPersona);
 
 }

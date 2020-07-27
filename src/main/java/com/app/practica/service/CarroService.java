@@ -5,17 +5,17 @@
  */
 package com.app.practica.service;
 
-import com.app.practica.model.Persona;
+import com.app.practica.model.Carro;
+import java.util.List;
 
 /**
  *
  * @author Simon
  */
-public interface PersonaService {
+public interface CarroService {
 
-    Persona guardarPersona(Persona persona);
-    
-    Persona findById(Long id);
-    
-    Persona findByDocumento(String nombre);
+    Carro guardarCarro(Carro carro);
+
+    List<Carro> findByIdPersona(Long id);
+
 }
